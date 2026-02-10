@@ -1,4 +1,4 @@
-# BrainTest - Cross-Platform Memory Game
+# BrainTest - Cross-Platform Memory Game (2015)
 
 A brain training and memory test game built with Cocos2d-x, ported from an original Flash game to C++ for cross-platform mobile and desktop deployment.
 
