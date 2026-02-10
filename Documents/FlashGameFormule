@@ -1,0 +1,60 @@
+function check_kotae(num) {
+        kotae_array = num_array.sort();
+        if (num == kotae_array[k_num]) {
+            m1_obj.my_sound.stop();
+            m1_obj.my_sound.start(0, 1);
+        } else {
+            m2_obj.my2_sound.start(0, 1);
+            this.all_enabled(false);
+            _root.mb_mc.set_mb(false);
+            _root.set_kotae(false, k_num);
+            _root.rem_mc.set_m();
+        }
+        k_num++;
+        if (k_num >= num_array.length) {
+            this.all_enabled(false);
+            _root.mb_mc.set_mb(true);
+            _root.set_kotae(true, k_num);
+            _root.rem_mc.set_r();
+        }
+    }
+b_num = 3;
+        max_mem = (all_num = (memory_num = (seikai_num = (g_num = 0))));
+function set_kotae(flag, num) {
+        all_num = all_num + b_num;
+        memory_num = memory_num + num;
+        if (max_mem < num) {
+            max_mem = num;
+        }
+        if (flag) {
+            seikai_num++;
+            b_num++;
+        } else {
+            b_num--;
+            if (b_num < 3) {
+                b_num = 3;
+            } else if (b_num > 10) {
+                b_num = 10;
+            }
+        }
+    }
+
+
+  if (memory_num >= 48) {
+        Lank = 20;
+    }
+    if (memory_num < 48) {
+        Lank = 69 - memory_num;
+    }
+    if (memory_num < 40) {
+        Lank = 70 - memory_num;
+    }
+    if (memory_num < 30) {
+        Lank = 80 - memory_num;
+    }
+    if (memory_num < 20) {
+        Lank = 120;
+    }
+    if ((seikai_num >= 8) || (Lank < 20)) {
+        Lank = 20;
+    }
